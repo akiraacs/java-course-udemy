@@ -34,11 +34,11 @@ public class BankAccount {
     }
 
     public void deposit(double amount) {
-        this.balance += amount;
+        balance += amount;
     }
 
     public void withdrawal(double amount) {
-        this.balance -= (amount + WITHDRAWALFEE);
+        balance -= (amount + WITHDRAWALFEE);
     }
 
     public String toString() {

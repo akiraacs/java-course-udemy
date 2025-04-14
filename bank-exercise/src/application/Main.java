@@ -1,9 +1,9 @@
 package application;
 
+import entities.BankAccount;
+
 import java.util.Locale;
 import java.util.Scanner;
-
-import entities.BankAccount;
 
 public class Main {
     public static void main(String[] args) {
