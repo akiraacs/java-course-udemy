@@ -11,6 +11,17 @@ public class People {
         this.height = height;
     }
 
+    public static double averageHeightPeople(People[] allPeople) {
+        double sumHeightPeople = 0;
+
+        for (int i=0; i<allPeople.length; i++) {
+            sumHeightPeople += allPeople[i].height;
+        }
+
+        return sumHeightPeople / allPeople.length;
+    }
+
+
     @Override
     public String toString() {
         return String.format(

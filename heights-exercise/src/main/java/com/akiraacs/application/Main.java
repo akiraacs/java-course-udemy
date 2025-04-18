@@ -31,10 +31,10 @@ public class Main {
             double heightPeople = sc.nextDouble();
 
             arrayPeople[i] = new People(namePeople, agePeople, heightPeople);
-//            System.out.println(arrayPeople[i]);
-
         }
 
+        double averageHeightPeople = People.averageHeightPeople(arrayPeople);
+        System.out.printf("\nAltura média: %.2f\n", averageHeightPeople);
 
         sc.close();
 }
