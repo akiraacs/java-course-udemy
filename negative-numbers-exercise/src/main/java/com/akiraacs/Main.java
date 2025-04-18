@@ -21,7 +21,7 @@ public class Main {
 
         System.out.println("NÚMEROS NEGATIVOS: ");
         for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] % 2 != 0) {
+            if (numbers[i] < 0) {
                 System.out.println(numbers[i]);
             }
         }
