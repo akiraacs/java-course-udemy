@@ -17,16 +17,25 @@ public class Main {
         People[] arrayPeople = new People[quantityPeople];
 
         for (int i=0; i<arrayPeople.length; i++) {
+            sc.nextLine();
+            System.out.printf("\nDados da %da pessoa:\n", i+1);
+
             // Dados da nova pessoa que sera cadastrada
+            System.out.println("Nome: ");
             String namePeople = sc.nextLine();
+
+            System.out.println("Idade: ");
             int agePeople = sc.nextInt();
+
+            System.out.println("Altura: ");
             double heightPeople = sc.nextDouble();
 
             arrayPeople[i] = new People(namePeople, agePeople, heightPeople);
-            System.out.printf("Dados da %da pessoa:", i+1);
+//            System.out.println(arrayPeople[i]);
+
         }
 
 
         sc.close();
-    }
 }
+    }

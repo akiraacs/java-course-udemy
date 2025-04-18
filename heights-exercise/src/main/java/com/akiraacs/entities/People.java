@@ -11,12 +11,11 @@ public class People {
         this.height = height;
     }
 
+    @Override
     public String toString() {
         return String.format(
-              "Nome: ", name,
-              "Idade: ", age,
-              "Altura: ", height
+            "Nome: %s\nIdade: %d\nAltura: %.2f",
+            name, age, height
         );
     }
 }
-g
