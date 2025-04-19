@@ -21,6 +21,17 @@ public class People {
         return sumHeightPeople / allPeople.length;
     }
 
+    public static int percentPeopleUnder16(People[] allPeople) {
+        int countPeopleUnder16 = 0;
+
+        for (int i=0; i<allPeople.length; i++) {
+            if (allPeople[i].age < 16) {
+                countPeopleUnder16++;
+            }
+        }
+
+        return countPeopleUnder16 * 100 / allPeople.length;
+    }
 
     @Override
     public String toString() {

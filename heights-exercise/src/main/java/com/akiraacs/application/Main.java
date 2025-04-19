@@ -33,8 +33,11 @@ public class Main {
             arrayPeople[i] = new People(namePeople, agePeople, heightPeople);
         }
 
-        double averageHeightPeople = People.averageHeightPeople(arrayPeople);
-        System.out.printf("\nAltura média: %.2f\n", averageHeightPeople);
+        double averageHeight = People.averageHeightPeople(arrayPeople);
+        System.out.printf("%nAltura média: %.2f%n", averageHeight);
+
+        int percentPeopleUnder16 = People.percentPeopleUnder16(arrayPeople);
+        System.out.printf("Pessoas com menos de 16 anos: %d%%%n", percentPeopleUnder16);
 
         sc.close();
 }
