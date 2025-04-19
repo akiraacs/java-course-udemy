@@ -39,6 +39,8 @@ public class Main {
         int percentPeopleUnder16 = People.percentPeopleUnder16(arrayPeople);
         System.out.printf("Pessoas com menos de 16 anos: %d%%%n", percentPeopleUnder16);
 
+        People.printNamePeopleUnder16(arrayPeople);
+
         sc.close();
 }
     }

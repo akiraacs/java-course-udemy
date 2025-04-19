@@ -33,6 +33,14 @@ public class People {
         return countPeopleUnder16 * 100 / allPeople.length;
     }
 
+    public static void printNamePeopleUnder16(People[] allPeople) {
+        for (int i=0; i<allPeople.length; i++) {
+            if (allPeople[i].age < 16) {
+                System.out.println(allPeople[i].name);
+            }
+        }
+    }
+
     @Override
     public String toString() {
         return String.format(
