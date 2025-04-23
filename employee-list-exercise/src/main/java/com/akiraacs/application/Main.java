@@ -38,13 +38,15 @@ public class Main {
 
             } while (idExists);
 
-            sc.nextLine();
             System.out.print("Name: ");
+            sc.nextLine(); // Remove line break from buffer
             String nameEmployee = sc.nextLine();
             System.out.print("Salary: ");
             double salaryEmployee = sc.nextDouble();
 
-            employees.add(new Employee(idEmployee, nameEmployee, salaryEmployee));
+            // Create new employee
+            Employee emp = new Employee(idEmployee, nameEmployee, salaryEmployee);
+            employees.add(emp);
         }
 
         System.out.println(employees);
