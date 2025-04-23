@@ -1,10 +1,11 @@
 package com.akiraacs.application;
 
+import com.akiraacs.entities.Employee;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
-import com.akiraacs.entities.Employee;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,10 +19,25 @@ public class Main {
         List<Employee> employees = new ArrayList<>();
 
         for (int i=0; i<quantityEmployees; i++) {
-            System.out.printf("Employee #%d%n", i+1);
+            System.out.printf("Employee #%d%n", i + 1);
 
+            // ID exists validation
+            int idEmployee;
+            boolean idExists;
             System.out.print("Id: ");
-            int idEmployee = sc.nextInt();
+
+            do {
+                idEmployee = sc.nextInt();
+
+                int idToCheck = idEmployee; // Necessario passar variaveis "finais" para expressoes lambdas
+                idExists = employees.stream().anyMatch(emp -> emp.getId() == idToCheck);
+
+                if (idExists) {
+                    System.out.print("This ID already exist. Enter a new ID: ");
+                }
+
+            } while (idExists);
+
             sc.nextLine();
             System.out.print("Name: ");
             String nameEmployee = sc.nextLine();
